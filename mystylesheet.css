@@ -1,6 +1,6 @@
 body
 {
- background-color: rgb(47, 43, 37);
+ background-color:black;
  background-size: cover;  
 }
 header{
@@ -45,11 +45,11 @@ header{
   font-weight: bolder
 }
 #firstmovieposter{
-    display: flex;
-    justify-content: space-between;
+flex-direction: right;
+margin-left: 100px;
 }
 #firstmovietitle{
-    font-size: 50px;
+    font-size: 150px;
     color: aliceblue;
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -61,15 +61,14 @@ header{
 }
 #availabletickets{
    font-size: x-large; 
-   margin-top: 200px;
-   margin-left: 40px;
+   margin-left: 60px;
    color: white
 }
 h4{
- color: aliceblue;
-margin-left: 400px;
+ color: aqua;
+margin-left: 500px;
 font-family: 'Roboto Condensed', sans-serif;
-font-size: 50px;
+font-size: 60px;
 
 }
 .availablemovies{
@@ -95,5 +94,30 @@ font-size: 50px;
    border-color: green;
 }
 #movielist{
-    
+margin: 100px;
 }
+#movielistitem{
+    color: white;
+    font-size: 35px;
+    font-weight: 150px;
+}
+
+#vmovietitle{
+    color: white;
+    font-size: x-large; 
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#availableticcs{
+    color: white;
+    font-size: x-large;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.covercontainer{
+    display: flex;
+}
+#availabletickets{
+    font-size: 50px;
+    font-weight: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
