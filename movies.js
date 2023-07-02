@@ -1,6 +1,6 @@
 const moviecontainer = document.querySelector('#firstmovieposter')
 const movielistcontainer = document.querySelector('#movielist')
-
+const viewmoviecontainer = document.querySelector('#Buymovieview')
 fetch("http://localhost:3000/films/1")
 .then(resp => resp.json())
 .then(filmdata  =>{
@@ -42,4 +42,35 @@ function displaymovieslist(movielist){
     movieitem.id = 'movielistitem'
     movieitem.innerText = movielist.title
     movielistcontainer.appendChild(movieitem)
+    movieitem.addEventListener('click', ()=>{
+        displaymovieimageitem(movielist)  
+    })
+}
+
+function displaymovieimageitem(movielist){
+
+    const vmovietitle = document.createElement('p')
+    vmovietitle.innerText = movielist.title
+    viewmoviecontainer.appendChild(vmovietitle)
+
+    const vmovieimage = document.createElement('img')
+    vmovieimage.src = movielist.poster
+    viewmoviecontainer.append(vmovieimage)
+
+    const vavailabletickets = document.createElement('p')
+    vavailabletickets.id = 'availableticcs'
+    vavailabletickets.innerText = movielist.capacity
+    viewmoviecontainer.append(vavailabletickets)
+
+    const buyticketbutton = document.createElement('button')
+    buyticketbutton.innerText = 'Buy Ticket'
+    viewmoviecontainer.append(buyticketbutton)
+
+    buyticketbutton.addEventListener('click', () =>{
+        
+        const availabletics = document.getElementById('availableticcs')
+        
+        availabletics.innerText = (movielist.capacity)--
+       
+    })
 }
