@@ -4,19 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="mystylesheet.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+</style>
 </head>
 <body>
-    <div
-     id = "firstmovieposter">
+ <header>
+      <div class = 'logo'>
+        <img src="" alt="">
+        <h3> Kenflix</h3>
     </div>
-    <div>
-        <ul id = "movielist">
-        </ul>
+  
+    <div class = 'nav'>
+        <ul>
+         <li> <a href="">Home</a></li>
+         <li> <a href="">Movie</a></li>
+         <li> <a href="">Genere </a></li>
+         <li> <a href="">Series</a></li>
+          </ul>
     </div>
-    <div id = 'Buymovieview'>
+
+<div class="user">
+<i class="fa-sharp fa-regular fa-bell"></i>
+<i class="fa-solid fa-magnifying-glass"></i>
+<a href="">Login</a>
+</div>
+ </header>
+   <div class="covercontainer">
+    <div 
+    id = "firstmovieposter">
+   </div>
+   <div id = "availableticket">
+   </div>
+   </div>
    
+    <h4> AVAILABLE MOVIES</h4>
+    <div class="availablemovies">
+        <div>
+            <ul id = "movielist">
+            </ul>
+        </div>
+        <div id = 'Buymovieview'>
+    
+        </div>
     </div>
+   
     
 </body>
 <script src="movies.js"></script>

@@ -17,7 +17,7 @@ function displayfirstmovie(firstmovie){
 
  const availabletickets = document.createElement('p')
  availabletickets.id = 'availabletickets'
- availabletickets.innerText = (firstmovie.capacity - firstmovie.tickets_sold)
+ availabletickets.innerText = "Available tickets"+"  "+" "+(firstmovie.capacity - firstmovie.tickets_sold)
  moviecontainer.append(availabletickets)
 
 
@@ -48,12 +48,13 @@ function displaymovieslist(movielist){
 }
 
 function displaymovieimageitem(movielist){
-
+    viewmoviecontainer.innerHTML = ""
     const vmovietitle = document.createElement('p')
     vmovietitle.innerText = movielist.title
     viewmoviecontainer.appendChild(vmovietitle)
 
     const vmovieimage = document.createElement('img')
+    vmovieimage.id ='vmovieimage'
     vmovieimage.src = movielist.poster
     viewmoviecontainer.append(vmovieimage)
 
@@ -63,6 +64,7 @@ function displaymovieimageitem(movielist){
     viewmoviecontainer.append(vavailabletickets)
 
     const buyticketbutton = document.createElement('button')
+    buyticketbutton.id = "buyticket"
     buyticketbutton.innerText = 'Buy Ticket'
     viewmoviecontainer.append(buyticketbutton)
 
