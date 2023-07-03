@@ -34,6 +34,9 @@ fetch ("http://localhost:3000/films")
 .then (movielist =>{
     console.log(movielist);
   movielist.forEach(movielistitem => {
+    
+    displaymovieimageitem(movielistitem)
+
     displaymovieslist(movielistitem)
     });
     
@@ -47,6 +50,15 @@ function displaymovieslist(movielist){
     movieitem.addEventListener('click', ()=>{
         displaymovieimageitem(movielist)  
     })
+   
+   const deletebtn = document.createElement('button')
+   deletebtn.id = 'deletebtn'
+   deletebtn.innerText = "Delete Movie"
+   movieitem.append(deletebtn)
+   
+   deletebtn.addEventListener('click' , ()=>{
+    movieitem.remove()
+   } )
 }
 
 function displaymovieimageitem(movielist){
@@ -76,8 +88,8 @@ function displaymovieimageitem(movielist){
         
         const availabletics = document.getElementById('availableticcs')
         
-        availabletics.innerText = (movielist.capacity)--
-       
+        availabletics.innerText = "Availabletickets"+ " = " + (movielist.capacity)--
+         
     })
    
 }

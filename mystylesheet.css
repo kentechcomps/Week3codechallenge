@@ -47,10 +47,12 @@ header{
 #firstmovieposter{
 flex-direction: right;
 margin-left: 100px;
+background: rgb(4,4,4);
+background: linear-gradient(0deg, rgba(4,4,4,1) 0%, rgba(0,0,0,0.7371323529411764) 46%, rgba(9,9,121,0) 100%);
 }
 #firstmovietitle{
-    font-size: 150px;
-    color: aliceblue;
+    font-size: 130px;
+    color: aqua;
     font-family: 'Roboto Condensed', sans-serif;
 }
 #firstmovieimage{
@@ -119,5 +121,9 @@ margin: 100px;
     font-size: 50px;
     font-weight: 50px;
     font-family: 'Roboto Condensed', sans-serif;
+}
+#deletebtn{
+    color: beige;
+    background-color: brown;
 }
 
