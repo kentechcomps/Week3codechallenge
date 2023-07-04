@@ -1,6 +1,6 @@
 body
 {
- background-color:black;
+ background-color:#242B2E;
  background-size: cover;  
 }
 header{
@@ -47,8 +47,7 @@ header{
 #firstmovieposter{
 flex-direction: right;
 margin-left: 100px;
-background: rgb(4,4,4);
-background: linear-gradient(0deg, rgba(4,4,4,1) 0%, rgba(0,0,0,0.7371323529411764) 46%, rgba(9,9,121,0) 100%);
+
 }
 #firstmovietitle{
     font-size: 130px;
@@ -56,10 +55,11 @@ background: linear-gradient(0deg, rgba(4,4,4,1) 0%, rgba(0,0,0,0.737132352941176
     font-family: 'Roboto Condensed', sans-serif;
 }
 #firstmovieimage{
-    height: 500px;
+    height: 70%;
     width: 500px;
     margin-right: 90px;
     border-radius: 40px;
+    margin-top: 40px;
 }
 #availabletickets{
    font-size: x-large; 
@@ -130,4 +130,12 @@ margin: 100px;
     color: white;
     font-size: 30px;
     margin-left: 60px;
+}
+#firstmovieruntime{
+    color: white;
+    font-size: 30px;
+    margin-left: 60px;
+}
+#firstmoviedetails{
+    margin-top: -80px;
 }
