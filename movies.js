@@ -15,7 +15,13 @@ function displayfirstmovie(firstmovie){
  const firstmovietitle = document.createElement('p')
  firstmovietitle.id = 'firstmovietitle' 
  firstmovietitle.innerText = firstmovie.title
- firstmoviedetailscontainer.append(firstmovietitle) 
+ firstmoviedetailscontainer.append(firstmovietitle)
+
+ const firstmovieshowtime = document.createElement('p')
+ firstmovieshowtime.id = 'firstmovieshowtime' 
+ firstmovieshowtime.innerText = "Showtime " + firstmovie.showtime
+ firstmoviedetailscontainer.append(firstmovieshowtime)
+  
 
  const availabletickets = document.createElement('p')
  availabletickets.id = 'availabletickets'
