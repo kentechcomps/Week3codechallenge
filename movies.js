@@ -84,10 +84,20 @@ function displaymovieimageitem(movielist){
     vmovieimage.id ='vmovieimage'
     vmovieimage.src = movielist.poster
     viewmoviecontainer.append(vmovieimage)
-   
+
+    const vmovieruntime = document.createElement('p')
+    vmovieruntime.id ='vmovieruntime'
+    vmovieruntime.innerText = "Runtime" + " " +  movielist.runtime
+    viewmoviecontainer.append(vmovieruntime)
+    
+    const vmovieshotime = document.createElement('p')
+    vmovieshotime.id ='vmovieruntime'
+    vmovieshotime.innerText = "Showtime"+ " " +  movielist.showtime
+    viewmoviecontainer.append(vmovieshotime)
+    
     const vavailabletickets = document.createElement('p')
     vavailabletickets.id = 'availableticcs'
-    vavailabletickets.innerText = movielist.capacity
+    vavailabletickets.innerText = " Available Tickets" + (movielist.capacity-movielist.tickets_sold)
     viewmoviecontainer.append(vavailabletickets)
 
     const buyticketbutton = document.createElement('button')
@@ -98,8 +108,8 @@ function displaymovieimageitem(movielist){
     buyticketbutton.addEventListener('click', () =>{
         
         const availabletics = document.getElementById('availableticcs')
-        
-        availabletics.innerText = "Availabletickets"+ " = " + (movielist.capacity)--
+        movielist.tickets_sold++
+        availabletics.innerText = "Availabletickets = " + (movielist.capacity-movielist.tickets_sold)
          
     })
    
